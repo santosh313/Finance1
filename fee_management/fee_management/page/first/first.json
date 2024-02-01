@@ -1,0 +1,26 @@
+{
+ "content": null,
+ "creation": "2024-01-01 00:35:41.553963",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2024-01-01 00:36:30.990247",
+ "modified_by": "Administrator",
+ "module": "Fee Management",
+ "name": "first",
+ "owner": "Administrator",
+ "page_name": "first",
+ "roles": [
+  {
+   "role": "Applicant"
+  },
+  {
+   "role": "Blogger"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "First"
+}

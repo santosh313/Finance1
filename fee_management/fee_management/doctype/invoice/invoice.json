@@ -1,0 +1,196 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Invoice-{university_name}-{#}",
+ "creation": "2023-12-06 15:28:18.847799",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "university_details_section",
+  "university_information_column",
+  "university_name",
+  "university_address",
+  "contact_at",
+  "section_break_wkch",
+  "student_information_column",
+  "applicant_id",
+  "applicant_name",
+  "section_break_rqs9",
+  "select_fee_structure",
+  "fee_component",
+  "fee_type",
+  "fee_schedule",
+  "refundable",
+  "program_type",
+  "category",
+  "campus",
+  "school",
+  "department",
+  "program",
+  "application_type",
+  "currency_type",
+  "pay"
+ ],
+ "fields": [
+  {
+   "fieldname": "university_details_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "university_name",
+   "fieldtype": "Link",
+   "label": "University Name",
+   "options": "University"
+  },
+  {
+   "fetch_from": "university_name.university_address",
+   "fieldname": "university_address",
+   "fieldtype": "Data",
+   "label": "University Address"
+  },
+  {
+   "fetch_from": "university_name.contact_at",
+   "fieldname": "contact_at",
+   "fieldtype": "Data",
+   "label": "Contact At"
+  },
+  {
+   "fetch_from": "select_fee_structure.fee_component",
+   "fieldname": "fee_component",
+   "fieldtype": "Int",
+   "label": "Fee Component"
+  },
+  {
+   "fetch_from": "select_fee_structure.fee_type",
+   "fieldname": "fee_type",
+   "fieldtype": "Data",
+   "label": "Fee Type"
+  },
+  {
+   "fetch_from": "select_fee_structure.fee_schedule",
+   "fieldname": "fee_schedule",
+   "fieldtype": "Data",
+   "label": "Fee Schedule"
+  },
+  {
+   "fetch_from": "select_fee_structure.refundable",
+   "fieldname": "refundable",
+   "fieldtype": "Data",
+   "label": "Refundable"
+  },
+  {
+   "fetch_from": "select_fee_structure.program_type",
+   "fieldname": "program_type",
+   "fieldtype": "Data",
+   "label": "Program Type"
+  },
+  {
+   "fetch_from": "select_fee_structure.category",
+   "fieldname": "category",
+   "fieldtype": "Data",
+   "label": "Category"
+  },
+  {
+   "fetch_from": "select_fee_structure.campus",
+   "fieldname": "campus",
+   "fieldtype": "Data",
+   "label": "Campus"
+  },
+  {
+   "fetch_from": "select_fee_structure.school",
+   "fieldname": "school",
+   "fieldtype": "Data",
+   "label": "School"
+  },
+  {
+   "fetch_from": "select_fee_structure.department",
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fetch_from": "select_fee_structure.program",
+   "fieldname": "program",
+   "fieldtype": "Data",
+   "label": "Program"
+  },
+  {
+   "fetch_from": "select_fee_structure.application_type",
+   "fieldname": "application_type",
+   "fieldtype": "Data",
+   "label": "Application Type"
+  },
+  {
+   "fetch_from": "select_fee_structure.currency_type",
+   "fieldname": "currency_type",
+   "fieldtype": "Data",
+   "label": "Currency Type"
+  },
+  {
+   "fieldname": "section_break_rqs9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "university_information_column",
+   "fieldtype": "Column Break",
+   "label": "University Information"
+  },
+  {
+   "fieldname": "student_information_column",
+   "fieldtype": "Column Break",
+   "label": "Student Information"
+  },
+  {
+   "fieldname": "select_fee_structure",
+   "fieldtype": "Link",
+   "label": "Select Fee Structure",
+   "options": "Fees"
+  },
+  {
+   "fieldname": "section_break_wkch",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "applicant_id",
+   "fieldtype": "Link",
+   "label": "Applicant ID",
+   "options": "Applicant"
+  },
+  {
+   "fetch_from": "applicant_id.applicant_name",
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "label": "Applicant Name"
+  },
+  {
+   "fieldname": "pay",
+   "fieldtype": "Button",
+   "label": "Pay"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-12 12:46:33.879740",
+ "modified_by": "Administrator",
+ "module": "Fee Management",
+ "name": "Invoice",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

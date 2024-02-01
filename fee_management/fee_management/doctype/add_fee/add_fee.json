@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-13 01:39:47.099085",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "program_type",
+  "program",
+  "application_type",
+  "category",
+  "fee_type",
+  "fee"
+ ],
+ "fields": [
+  {
+   "fieldname": "program",
+   "fieldtype": "Select",
+   "label": "Program",
+   "options": "Select\nProgram 1\nProgram 2\nProgram 3"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "Select\nNot Applicable\nGeneral - TN Candidates\nGeneral - OS Candidates\nGeneral - NRI Candidates\nDifferently Abled - TN Candidates - General\nDifferently Abled - TN Candidates - SC/ST/SCA\nFirst Graduate - TN Candidate\nFor TN SC/ST/SCA Candidates ( below 2.5 lakh)\nPost Matric Scholarship - For Tamil Nadu SC/ST/SCA Candidates\nTamil Nadu SC/ST/SCA"
+  },
+  {
+   "fieldname": "fee",
+   "fieldtype": "Data",
+   "label": "Fee "
+  },
+  {
+   "fieldname": "program_type",
+   "fieldtype": "Select",
+   "label": "Program Type",
+   "options": "Select\nRegular\nSelf Supporting"
+  },
+  {
+   "fieldname": "application_type",
+   "fieldtype": "Select",
+   "label": "Application Type",
+   "options": "Select\nUG\nPG\nPhD\nCertificate"
+  },
+  {
+   "fieldname": "fee_type",
+   "fieldtype": "Select",
+   "label": "Fee Type",
+   "options": "Select\nApplication Fee\nAdmission Fee\nTuition Fee\nSemester Fee\nDevelopment Fee"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-13 18:52:47.373843",
+ "modified_by": "Administrator",
+ "module": "Fee Management",
+ "name": "add fee",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

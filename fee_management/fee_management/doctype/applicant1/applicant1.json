@@ -1,0 +1,248 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-18 11:18:14.432204",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "applicant_name",
+  "email",
+  "mob_no",
+  "application_type",
+  "program_type",
+  "program",
+  "program_pg",
+  "program_phd",
+  "department_bsc",
+  "department_be",
+  "department_bla",
+  "department_ba",
+  "department_bcom",
+  "department_bdes",
+  "department_bba",
+  "department_master_engineering",
+  "department_msc",
+  "department_mba",
+  "department_ma",
+  "department_phd_engineering",
+  "department_phd_science",
+  "quota_regular",
+  "quota_self_supported",
+  "category_regular_general",
+  "category_self_supported_general",
+  "category_differently_abled_regular",
+  "category_differently_abled_self_supported"
+ ],
+ "fields": [
+  {
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "label": "Applicant Name"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "mob_no",
+   "fieldtype": "Data",
+   "label": "Mob No"
+  },
+  {
+   "fieldname": "program_type",
+   "fieldtype": "Link",
+   "label": "Program Type",
+   "options": "Program Type Master"
+  },
+  {
+   "depends_on": "eval:doc.application_type=='PG';",
+   "fieldname": "program_pg",
+   "fieldtype": "Link",
+   "label": "Program PG",
+   "options": "PG Program Master"
+  },
+  {
+   "depends_on": "eval:doc.application_type=='PhD';",
+   "fieldname": "program_phd",
+   "fieldtype": "Link",
+   "label": "Program Ph.D",
+   "options": "PhD Program"
+  },
+  {
+   "depends_on": "eval:doc.program=='B.Sc';",
+   "fieldname": "department_bsc",
+   "fieldtype": "Link",
+   "label": "Department Bsc",
+   "options": "Department BSc"
+  },
+  {
+   "depends_on": "eval:doc.program=='Bachelor of Engineering';",
+   "fieldname": "department_be",
+   "fieldtype": "Link",
+   "label": "Department BE",
+   "options": "Department Engineering"
+  },
+  {
+   "depends_on": "eval:doc.program=='B.L.A.';",
+   "fieldname": "department_bla",
+   "fieldtype": "Link",
+   "label": "Department BLA",
+   "options": "Department in BLA"
+  },
+  {
+   "depends_on": "eval:doc.program=='B.A.';",
+   "fieldname": "department_ba",
+   "fieldtype": "Link",
+   "label": "Department BA",
+   "options": "Departments in BA"
+  },
+  {
+   "depends_on": "eval:doc.program=='B.Com';",
+   "fieldname": "department_bcom",
+   "fieldtype": "Link",
+   "label": "Department Bcom",
+   "options": "Departments in BCom"
+  },
+  {
+   "depends_on": "eval:doc.program=='B. Des.';",
+   "fieldname": "department_bdes",
+   "fieldtype": "Link",
+   "label": "Department BDes",
+   "options": "Departments in BDes"
+  },
+  {
+   "depends_on": "eval:doc.program=='B.B.A.';",
+   "fieldname": "department_bba",
+   "fieldtype": "Link",
+   "label": "Department BBA",
+   "options": "Departments in  BBA"
+  },
+  {
+   "depends_on": "eval:doc.program_pg=='Master Of Engineering';",
+   "fieldname": "department_master_engineering",
+   "fieldtype": "Link",
+   "label": "Department Master Engineering",
+   "options": "Department Master Of Engineering"
+  },
+  {
+   "depends_on": "eval:doc.program_pg=='M.Sc';",
+   "fieldname": "department_msc",
+   "fieldtype": "Link",
+   "label": " Department Msc",
+   "options": "Department Of Msc"
+  },
+  {
+   "depends_on": "eval:doc.program_pg=='M.B.A.';",
+   "fieldname": "department_mba",
+   "fieldtype": "Link",
+   "label": "Department MBA",
+   "options": "Departments in MBA"
+  },
+  {
+   "depends_on": "eval:doc.program_pg=='M.A.';",
+   "fieldname": "department_ma",
+   "fieldtype": "Link",
+   "label": "Department MA",
+   "options": "Departments in MA"
+  },
+  {
+   "depends_on": "eval:doc.program_phd=='PhD in Engineering';",
+   "fieldname": "department_phd_engineering",
+   "fieldtype": "Link",
+   "label": "Department Phd Engineering",
+   "options": "Department of PhD Engineering"
+  },
+  {
+   "depends_on": "eval:doc.program_phd=='PhD in Science';",
+   "fieldname": "department_phd_science",
+   "fieldtype": "Link",
+   "label": "Department PhD Science",
+   "options": "Department Of PhD in Science"
+  },
+  {
+   "depends_on": "eval:doc.program_type=='Regular';",
+   "fieldname": "quota_regular",
+   "fieldtype": "Link",
+   "label": "Quota Regular",
+   "options": "Quota Master Regular"
+  },
+  {
+   "depends_on": "eval:doc.program_type=='Self Supported';",
+   "fieldname": "quota_self_supported",
+   "fieldtype": "Link",
+   "label": "Quota Self Supported",
+   "options": "Quota Master Self Supported"
+  },
+  {
+   "depends_on": "eval:doc.quota_self_supported=='General';",
+   "fieldname": "category_self_supported_general",
+   "fieldtype": "Link",
+   "label": "Category self supported general",
+   "options": "Category Master Self Supported General"
+  },
+  {
+   "depends_on": "eval:doc.quota_regular=='General';",
+   "fieldname": "category_regular_general",
+   "fieldtype": "Link",
+   "label": "Category Regular general",
+   "options": "General Category Master"
+  },
+  {
+   "depends_on": "eval:doc.quota_regular=='Differently Abled (TN Candidates)';",
+   "fieldname": "category_differently_abled_regular",
+   "fieldtype": "Link",
+   "label": "Category Differently Abled Regular",
+   "options": "Regular Differently Abled Category Master"
+  },
+  {
+   "depends_on": "eval:doc.quota_self_supported=='Differently Abled (TN Candidates)';",
+   "fieldname": "category_differently_abled_self_supported",
+   "fieldtype": "Link",
+   "label": "Category Differently Abled Self Supported",
+   "options": "Self Supported Differently Abled Category"
+  },
+  {
+   "fieldname": "application_type",
+   "fieldtype": "Link",
+   "label": "Application Type",
+   "options": "Application Type"
+  },
+  {
+   "depends_on": "eval:doc.application_type=='UG';",
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Program UG",
+   "options": "UG Program Master"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Invoice1",
+   "link_fieldname": "applicant_id"
+  }
+ ],
+ "modified": "2023-12-18 17:47:53.442074",
+ "modified_by": "Administrator",
+ "module": "Fee Management",
+ "name": "Applicant1",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

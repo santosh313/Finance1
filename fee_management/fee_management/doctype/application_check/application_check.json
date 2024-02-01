@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-16 20:17:28.791106",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name_of_student",
+  "category",
+  "program",
+  "department"
+ ],
+ "fields": [
+  {
+   "fieldname": "name_of_student",
+   "fieldtype": "Link",
+   "label": "Name of student",
+   "options": "Applicant"
+  },
+  {
+   "fetch_from": "name_of_student.category",
+   "fieldname": "category",
+   "fieldtype": "Data",
+   "label": "category"
+  },
+  {
+   "fetch_from": "name_of_student.program",
+   "fieldname": "program",
+   "fieldtype": "Data",
+   "label": "Program"
+  },
+  {
+   "fetch_from": "name_of_student.department",
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-16 20:22:31.457062",
+ "modified_by": "Administrator",
+ "module": "Fee Management",
+ "name": "Application check",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

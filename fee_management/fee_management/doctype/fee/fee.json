@@ -1,0 +1,239 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{course_type}-{quota}-{category}",
+ "creation": "2023-12-02 19:28:27.475013",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "course_type",
+  "quota",
+  "category",
+  "one_time_feespayble_at_the_time_of_admission_section",
+  "admission_fee",
+  "academic_course_fee",
+  "personality_and_character_development",
+  "placement_and_training_charges",
+  "sports_affiliation_fee",
+  "yrc_special_compaign",
+  "valar_tamil_mandram_development_fund",
+  "smart_card_fee",
+  "recognition_registrationenrollment_fee",
+  "cooperative_society_membership_fee",
+  "caution_depositrefundable_section",
+  "institutional_deposit",
+  "library_deposit",
+  "semester_feepayble_every_semester_section",
+  "tuition_fee",
+  "development_fee",
+  "library_fee",
+  "computer_charges",
+  "laboratory_contingency_charges",
+  "educational_media_charges",
+  "internet_society_fee",
+  "sports_and_games_fee",
+  "university_cultural_and_professional_fee",
+  "student_accident_and_medical_relief_fund",
+  "registration_and_enrollment_fee",
+  "yrcarmy_flag_day_subscription",
+  "industrial_visit",
+  "sports_affiliation_fee2",
+  "enterpreneurship_development"
+ ],
+ "fields": [
+  {
+   "fieldname": "course_type",
+   "fieldtype": "Link",
+   "label": "Course Type",
+   "options": "Course Master"
+  },
+  {
+   "fieldname": "quota",
+   "fieldtype": "Link",
+   "label": "Quota",
+   "options": "Quota Master Regular"
+  },
+  {
+   "depends_on": "eval:doc.quota=='General' || doc.quota=='Differentially Abled (TN Candidates)';",
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "General Category Master"
+  },
+  {
+   "fieldname": "one_time_feespayble_at_the_time_of_admission_section",
+   "fieldtype": "Section Break",
+   "label": "One Time Fees(Payble at the time of admission)"
+  },
+  {
+   "fieldname": "admission_fee",
+   "fieldtype": "Data",
+   "label": "Admission Fee"
+  },
+  {
+   "fieldname": "academic_course_fee",
+   "fieldtype": "Data",
+   "label": "Academic Course Fee"
+  },
+  {
+   "fieldname": "personality_and_character_development",
+   "fieldtype": "Data",
+   "label": "Personality and character development"
+  },
+  {
+   "fieldname": "placement_and_training_charges",
+   "fieldtype": "Data",
+   "label": "Placement and Training Charges"
+  },
+  {
+   "fieldname": "sports_affiliation_fee",
+   "fieldtype": "Data",
+   "label": "Sports affiliation Fee"
+  },
+  {
+   "fieldname": "yrc_special_compaign",
+   "fieldtype": "Data",
+   "label": "YRC Special Compaign /Activities/NSS/NSO/Other Activities"
+  },
+  {
+   "fieldname": "valar_tamil_mandram_development_fund",
+   "fieldtype": "Data",
+   "label": "Valar Tamil mandram Development Fund"
+  },
+  {
+   "fieldname": "smart_card_fee",
+   "fieldtype": "Data",
+   "label": "Smart Card fee"
+  },
+  {
+   "fieldname": "recognition_registrationenrollment_fee",
+   "fieldtype": "Data",
+   "label": "Recognition ,Registration,Enrollment Fee"
+  },
+  {
+   "fieldname": "cooperative_society_membership_fee",
+   "fieldtype": "Data",
+   "label": "Cooperative Society Membership Fee"
+  },
+  {
+   "fieldname": "caution_depositrefundable_section",
+   "fieldtype": "Section Break",
+   "label": "Caution Deposit(Refundable)"
+  },
+  {
+   "fieldname": "institutional_deposit",
+   "fieldtype": "Data",
+   "label": "Institutional Deposit"
+  },
+  {
+   "fieldname": "library_deposit",
+   "fieldtype": "Data",
+   "label": "Library Deposit"
+  },
+  {
+   "fieldname": "semester_feepayble_every_semester_section",
+   "fieldtype": "Section Break",
+   "label": "Semester Fee(Payble Every Semester)"
+  },
+  {
+   "fieldname": "tuition_fee",
+   "fieldtype": "Data",
+   "label": "Tuition Fee"
+  },
+  {
+   "fieldname": "development_fee",
+   "fieldtype": "Data",
+   "label": "Development Fee"
+  },
+  {
+   "fieldname": "library_fee",
+   "fieldtype": "Data",
+   "label": "Library Fee"
+  },
+  {
+   "fieldname": "computer_charges",
+   "fieldtype": "Data",
+   "label": "Computer Charges"
+  },
+  {
+   "fieldname": "laboratory_contingency_charges",
+   "fieldtype": "Data",
+   "label": "Laboratory Contingency Charges"
+  },
+  {
+   "fieldname": "educational_media_charges",
+   "fieldtype": "Data",
+   "label": "Educational Media Charges"
+  },
+  {
+   "fieldname": "internet_society_fee",
+   "fieldtype": "Data",
+   "label": "Internet Society Fee"
+  },
+  {
+   "fieldname": "sports_and_games_fee",
+   "fieldtype": "Data",
+   "label": "Sports and Games Fee"
+  },
+  {
+   "fieldname": "university_cultural_and_professional_fee",
+   "fieldtype": "Data",
+   "label": "University cultural and professional Society Fee"
+  },
+  {
+   "fieldname": "student_accident_and_medical_relief_fund",
+   "fieldtype": "Data",
+   "label": "Student Accident and medical Relief Fund"
+  },
+  {
+   "fieldname": "registration_and_enrollment_fee",
+   "fieldtype": "Data",
+   "label": "Registration and enrollment Fee"
+  },
+  {
+   "fieldname": "yrcarmy_flag_day_subscription",
+   "fieldtype": "Data",
+   "label": "YRC/Army Flag Day subscription"
+  },
+  {
+   "fieldname": "industrial_visit",
+   "fieldtype": "Data",
+   "label": "Industrial Visit"
+  },
+  {
+   "fieldname": "sports_affiliation_fee2",
+   "fieldtype": "Data",
+   "label": "Sports Affiliation Fee2"
+  },
+  {
+   "fieldname": "enterpreneurship_development",
+   "fieldtype": "Data",
+   "label": "Enterpreneurship Development"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-12 19:34:29.239356",
+ "modified_by": "Administrator",
+ "module": "Fee Management",
+ "name": "FEE",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

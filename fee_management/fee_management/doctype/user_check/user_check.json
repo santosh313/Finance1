@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:SNV-{####}",
+ "creation": "2024-01-01 19:08:07.039729",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "age",
+  "user_id",
+  "fees_type",
+  "college_name",
+  "highschool_name",
+  "amended_from",
+  "suruwat",
+  "sampll"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "Age"
+  },
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "label": "User Id",
+   "options": "User"
+  },
+  {
+   "fieldname": "fees_type",
+   "fieldtype": "Link",
+   "label": "Fees Type",
+   "options": "Fees"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "User Check",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "college_name",
+   "fieldtype": "Data",
+   "label": "College Name"
+  },
+  {
+   "fieldname": "highschool_name",
+   "fieldtype": "Data",
+   "label": "Highschool Name"
+  },
+  {
+   "fieldname": "suruwat",
+   "fieldtype": "Date",
+   "label": "Suruwat"
+  },
+  {
+   "fieldname": "sampll",
+   "fieldtype": "Date",
+   "label": "Sampll"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-01-03 18:25:59.501225",
+ "modified_by": "Administrator",
+ "module": "Fee Management",
+ "name": "User Check",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

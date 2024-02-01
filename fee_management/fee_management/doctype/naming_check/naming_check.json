@@ -1,0 +1,461 @@
+{
+ "actions": [
+  {
+   "action": "fee_management.fee_management.doctype.naming_check.naming_check.execute_function\n",
+   "action_type": "Server Action",
+   "label": "Execute"
+  },
+  {
+   "action": "/app/fees/new-fees",
+   "action_type": "Route",
+   "label": "Execute1"
+  }
+ ],
+ "allow_guest_to_view": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-12-21 12:32:21.000790",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "student_name1",
+  "steps",
+  "mobile_no",
+  "open_fees",
+  "send_email",
+  "date_of_birth",
+  "age",
+  "fee_structure1",
+  "naming_series",
+  "school_name",
+  "profile_photo",
+  "status",
+  "route",
+  "is_published",
+  "lft",
+  "rgt",
+  "is_group",
+  "old_parent",
+  "parent_naming_check",
+  "starts_on",
+  "ends_on",
+  "first_name",
+  "last_name",
+  "full_name",
+  "fee_structure",
+  "fee",
+  "doctype_name",
+  "documnet_id",
+  "is_paid",
+  "choose1",
+  "semester_fee",
+  "file1",
+  "photo",
+  "text_bpsz",
+  "publish_date",
+  "borth_time_and_date",
+  "barcode11",
+  "do_or_die",
+  "code_here",
+  "color",
+  "amount",
+  "currency",
+  "warning",
+  "logo",
+  "editor",
+  "marks",
+  "rate_us",
+  "multiselect",
+  "sign",
+  "time_qrig",
+  "farak",
+  "full_nav",
+  "feed",
+  "my_address",
+  "autocomplete",
+  "money",
+  "lonking",
+  "personal_info_tab",
+  "date_oh_borth"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "Naming Series"
+  },
+  {
+   "fieldname": "school_name",
+   "fieldtype": "Data",
+   "label": "School Name"
+  },
+  {
+   "fieldname": "profile_photo",
+   "fieldtype": "Attach Image",
+   "label": "Profile Photo"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "New\nOpen\nClosed\nPending"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_published",
+   "fieldtype": "Check",
+   "label": "Is Published"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "label": "Old Parent",
+   "options": "Naming Check"
+  },
+  {
+   "fieldname": "parent_naming_check",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Parent Naming Check",
+   "options": "Naming Check"
+  },
+  {
+   "fieldname": "starts_on",
+   "fieldtype": "Date",
+   "label": "Starts On"
+  },
+  {
+   "fieldname": "ends_on",
+   "fieldtype": "Date",
+   "label": "Ends On"
+  },
+  {
+   "default": "Gayak",
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "is_virtual": 1,
+   "label": "Full Name",
+   "options": "f\"{doc.first_name} {doc.last_name}\""
+  },
+  {
+   "fieldname": "fee_structure",
+   "fieldtype": "Link",
+   "label": "Fee structure",
+   "link_filters": "[[{\"fieldname\":\"feees\",\"field_option\":\"Fees1\"},\"application_type\",\"=\",\"UG\"],[{\"fieldname\":\"feees\",\"field_option\":\"Fees1\"},\"program_type\",\"=\",\"Regular\"]]",
+   "options": "Fees1"
+  },
+  {
+   "fetch_from": "fee_structure.fee_component",
+   "fieldname": "fee",
+   "fieldtype": "Data",
+   "label": "fee"
+  },
+  {
+   "fieldname": "doctype_name",
+   "fieldtype": "Link",
+   "label": "Doctype Name",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "documnet_id",
+   "fieldtype": "Dynamic Link",
+   "label": "Documnet Id",
+   "options": "doctype_name"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_paid",
+   "fieldtype": "Check",
+   "label": "Is Paid"
+  },
+  {
+   "default": "one",
+   "fieldname": "choose1",
+   "fieldtype": "Select",
+   "label": "Choose1",
+   "options": "one\ntwo\nthreee\nfour",
+   "sort_options": 1
+  },
+  {
+   "fieldname": "semester_fee",
+   "fieldtype": "Table",
+   "label": "Semester Fee",
+   "options": "Semester Fee Item Child"
+  },
+  {
+   "fieldname": "file1",
+   "fieldtype": "Attach",
+   "label": "File1"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "fieldname": "text_bpsz",
+   "fieldtype": "Text Editor",
+   "label": "Experince"
+  },
+  {
+   "fieldname": "publish_date",
+   "fieldtype": "Date",
+   "label": "Publish Date"
+  },
+  {
+   "fieldname": "borth_time_and_date",
+   "fieldtype": "Datetime",
+   "label": "Borth time and date"
+  },
+  {
+   "fieldname": "barcode11",
+   "fieldtype": "Barcode",
+   "label": "Barcode11"
+  },
+  {
+   "fieldname": "do_or_die",
+   "fieldtype": "Button",
+   "label": "DO or Die"
+  },
+  {
+   "fieldname": "code_here",
+   "fieldtype": "Code",
+   "label": "Code here",
+   "options": "Python\nJava\nC\n"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Color",
+   "label": "Color"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Currency",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount to paid"
+  },
+  {
+   "fieldname": "warning",
+   "fieldtype": "HTML",
+   "label": "Warning",
+   "options": "<p class=\"alert alert-warning\">out of stock</p>"
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Image",
+   "label": "Logo",
+   "options": "cover_image"
+  },
+  {
+   "fieldname": "editor",
+   "fieldtype": "Markdown Editor",
+   "label": "Editor"
+  },
+  {
+   "fieldname": "marks",
+   "fieldtype": "Percent",
+   "label": "Marks"
+  },
+  {
+   "fieldname": "rate_us",
+   "fieldtype": "Rating",
+   "label": "Rate us",
+   "options": "7"
+  },
+  {
+   "fieldname": "personal_info_tab",
+   "fieldtype": "Tab Break",
+   "label": "Personal Info"
+  },
+  {
+   "fieldname": "date_oh_borth",
+   "fieldtype": "Date",
+   "label": "Date oh borth"
+  },
+  {
+   "fieldname": "multiselect",
+   "fieldtype": "Table MultiSelect",
+   "label": "Multiselect",
+   "options": "Semester Fee Item Child"
+  },
+  {
+   "fieldname": "sign",
+   "fieldtype": "Signature",
+   "label": "sign"
+  },
+  {
+   "fieldname": "time_qrig",
+   "fieldtype": "Time",
+   "label": "vel"
+  },
+  {
+   "fieldname": "farak",
+   "fieldtype": "Duration",
+   "hide_days": 1,
+   "hide_seconds": 1,
+   "label": "farak"
+  },
+  {
+   "fetch_from": "fee_structure.school",
+   "fieldname": "full_nav",
+   "fieldtype": "Read Only",
+   "label": "full nav"
+  },
+  {
+   "fieldname": "feed",
+   "fieldtype": "JSON",
+   "label": "feed"
+  },
+  {
+   "fieldname": "my_address",
+   "fieldtype": "Geolocation",
+   "label": "my ADDRESS"
+  },
+  {
+   "fieldname": "autocomplete",
+   "fieldtype": "Autocomplete",
+   "label": "Autocomplete",
+   "options": "santoshsutar3130\nsantosh.mahadev@techademy\nsutars1997\nprasaddinde\nrohitlohar\nkeshavpandit"
+  },
+  {
+   "fieldname": "money",
+   "fieldtype": "Link",
+   "label": "Money",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "lonking",
+   "fieldtype": "Link",
+   "label": "lonking",
+   "options": "Fees1"
+  },
+  {
+   "fieldname": "student_name1",
+   "fieldtype": "Data",
+   "label": "Student Name"
+  },
+  {
+   "fieldname": "fee_structure1",
+   "fieldtype": "Link",
+   "label": "Fee Structure1",
+   "options": "Student Invoice"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Data",
+   "label": "Mobile no"
+  },
+  {
+   "fieldname": "open_fees",
+   "fieldtype": "Button",
+   "label": "Open fees"
+  },
+  {
+   "fieldname": "send_email",
+   "fieldtype": "Button",
+   "label": "Send Email"
+  },
+  {
+   "fieldname": "steps",
+   "fieldtype": "Select",
+   "label": "Steps",
+   "options": "Step1\nStep2\nStep3\nStep4"
+  }
+ ],
+ "has_web_view": 1,
+ "image_field": "profile_photo",
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "is_published_field": "is_published",
+ "is_tree": 1,
+ "links": [
+  {
+   "is_child_table": 1,
+   "link_doctype": "One Time Fee Child",
+   "link_fieldname": "name",
+   "parent_doctype": "Student Invoice",
+   "table_fieldname": "one_time_fee"
+  }
+ ],
+ "modified": "2024-01-08 13:54:59.488033",
+ "modified_by": "Administrator",
+ "module": "Fee Management",
+ "name": "Naming Check",
+ "naming_rule": "By \"Naming Series\" field",
+ "nsm_parent_field": "parent_naming_check",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "Naming Checks",
+ "search_fields": "school_name",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "school_name"
+}

@@ -1,0 +1,141 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{course}-{quota}-{category_general}",
+ "creation": "2023-12-04 12:14:17.789056",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "course",
+  "quota",
+  "quota_unaided",
+  "category_general",
+  "category_differently_abled",
+  "select_fee_group1",
+  "add_fee_group",
+  "add_group",
+  "select_fee_group2",
+  "cautious_field",
+  "add_group2",
+  "select_fee_group3",
+  "table_yjry",
+  "grand_total"
+ ],
+ "fields": [
+  {
+   "fieldname": "course",
+   "fieldtype": "Link",
+   "label": "Course",
+   "options": "Course Master"
+  },
+  {
+   "depends_on": "eval:doc.select_fee_group1",
+   "fieldname": "add_fee_group",
+   "fieldtype": "Table",
+   "options": "One Time Fee Child"
+  },
+  {
+   "default": "0",
+   "fieldname": "add_group",
+   "fieldtype": "Check",
+   "label": "Add Group"
+  },
+  {
+   "depends_on": "eval:doc.select_fee_group2",
+   "fieldname": "cautious_field",
+   "fieldtype": "Table",
+   "options": "Caution Deposit Item Child"
+  },
+  {
+   "fieldname": "select_fee_group1",
+   "fieldtype": "Link",
+   "label": "Select Fee Group",
+   "options": "Fee Group Master"
+  },
+  {
+   "depends_on": "eval:doc.add_group=='1';",
+   "fieldname": "select_fee_group2",
+   "fieldtype": "Link",
+   "label": "Select Fee Group",
+   "options": "Fee Group Master"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.add_group=='1';",
+   "fieldname": "add_group2",
+   "fieldtype": "Check",
+   "label": "Add Group"
+  },
+  {
+   "depends_on": "eval:doc.select_fee_group3",
+   "fieldname": "table_yjry",
+   "fieldtype": "Table",
+   "options": "Semester Fee Item Child"
+  },
+  {
+   "depends_on": "eval:doc.add_group2=='1';",
+   "fieldname": "select_fee_group3",
+   "fieldtype": "Link",
+   "label": "select Fee Group",
+   "options": "Fee Group Master"
+  },
+  {
+   "depends_on": "eval:doc.course=='Regular Course(Aided)';",
+   "fieldname": "quota",
+   "fieldtype": "Link",
+   "label": "Quota",
+   "options": "Quota Master Regular"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Int",
+   "label": "GRAND TOTAL"
+  },
+  {
+   "depends_on": "eval:doc.course=='Self Supporting Course(Unaided)';",
+   "fieldname": "quota_unaided",
+   "fieldtype": "Link",
+   "label": "Quota ",
+   "options": "Quota Master Self Supported"
+  },
+  {
+   "depends_on": "eval:doc.quota=='Differently Abled (TN Candidates)' || doc.quota_unaided=='Differently Abled (TN Candidates)';",
+   "fieldname": "category_differently_abled",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Regular Differently Abled Category Master"
+  },
+  {
+   "depends_on": "eval:doc.quota=='General' || doc.quota_unaided=='General';",
+   "fieldname": "category_general",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "General Category Master"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-13 14:45:43.836818",
+ "modified_by": "Administrator",
+ "module": "Fee Management",
+ "name": "New Fee",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

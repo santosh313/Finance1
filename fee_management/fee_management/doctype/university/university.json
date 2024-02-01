@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:university_name",
+ "creation": "2023-12-06 15:40:54.072975",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "logo",
+  "university_name",
+  "university_address",
+  "contact_at"
+ ],
+ "fields": [
+  {
+   "fieldname": "university_name",
+   "fieldtype": "Data",
+   "label": "University Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "university_address",
+   "fieldtype": "Data",
+   "label": "University Address"
+  },
+  {
+   "fieldname": "contact_at",
+   "fieldtype": "Data",
+   "label": "Contact At"
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-06 19:26:26.612654",
+ "modified_by": "Administrator",
+ "module": "Fee Management",
+ "name": "University",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

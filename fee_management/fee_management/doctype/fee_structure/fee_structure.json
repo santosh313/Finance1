@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-11-30 12:02:00.138065",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "program",
+  "branch_eng",
+  "branch_pharm",
+  "branch_science",
+  "calender_year",
+  "educational_year",
+  "quota",
+  "category",
+  "applicable_fees",
+  "concession",
+  "fees_to_paid"
+ ],
+ "fields": [
+  {
+   "fieldname": "calender_year",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Calender Year"
+  },
+  {
+   "fieldname": "educational_year",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Educational Year",
+   "options": "IY\nSY\nTY\nFY"
+  },
+  {
+   "fieldname": "quota",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Quota",
+   "options": "Government Quota\nManagement Quota"
+  },
+  {
+   "depends_on": "eval:doc.quota=='Government Quota';",
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "Open/General\nTFWS\nEBC & EWS\nOBC\nSBC\nNT-A\nNT-B\nNT-C\nNT-D\nVJNT\nSC\nST\nOther State\nJ&K\nNCC\nSports\nHandicapped"
+  },
+  {
+   "fieldname": "applicable_fees",
+   "fieldtype": "Float",
+   "label": "Applicable Fees"
+  },
+  {
+   "fieldname": "concession",
+   "fieldtype": "Float",
+   "label": "Concession Fees"
+  },
+  {
+   "fieldname": "fees_to_paid",
+   "fieldtype": "Float",
+   "label": "Actual Fees To Paid"
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Select",
+   "label": "Program",
+   "options": "Engineering\nMedical\nScience\nLaw\nArts\nCommerce\nManagement\nPharmacy\nAnimation and Design"
+  },
+  {
+   "depends_on": "eval:doc.program=='Engineering';",
+   "fieldname": "branch_eng",
+   "fieldtype": "Select",
+   "label": "Branch Eng",
+   "options": "Mech\nCivil\nEEE\nE&Tc"
+  },
+  {
+   "depends_on": "eval:doc.program=='Pharmacy';",
+   "fieldname": "branch_pharm",
+   "fieldtype": "Select",
+   "label": "Branch Pharm",
+   "options": "B.Pharm\nD.Pharm"
+  },
+  {
+   "depends_on": "eval:doc.program=='Science';",
+   "fieldname": "branch_science",
+   "fieldtype": "Select",
+   "label": "Branch Science",
+   "options": "B.Sc\nB.Sc(Maths)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-11-30 15:34:55.999522",
+ "modified_by": "Administrator",
+ "module": "Fee Management",
+ "name": "Fee Structure",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

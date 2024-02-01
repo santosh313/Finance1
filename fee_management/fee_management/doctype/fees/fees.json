@@ -1,0 +1,127 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{#}",
+ "creation": "2023-12-05 19:31:43.832519",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "fee_component",
+  "fee_type",
+  "fee_schedule",
+  "refundable",
+  "program_type",
+  "category",
+  "campus",
+  "school",
+  "department",
+  "program",
+  "application_type",
+  "currency_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "fee_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Fee Type",
+   "options": "Select\nApplication Fee\nAdmission Fee\nTuition Fee\nSemester Fee\nDevelopment Fee"
+  },
+  {
+   "fieldname": "fee_schedule",
+   "fieldtype": "Select",
+   "label": "Fee Schedule",
+   "options": "Select\nRecurring\nOne-time"
+  },
+  {
+   "fieldname": "refundable",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Refundable",
+   "options": "Select\nYes\nNo"
+  },
+  {
+   "fieldname": "program_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Program Type",
+   "options": "Select\nRegular\nSelf Supporting"
+  },
+  {
+   "fieldname": "campus",
+   "fieldtype": "Select",
+   "label": "Campus",
+   "options": "Select\nCampus 1\nCampus 2\nCampus 3"
+  },
+  {
+   "fieldname": "school",
+   "fieldtype": "Select",
+   "label": "School",
+   "options": "Select\nSchool 1\nSchool 2\nSchool 3"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Select",
+   "label": "Department",
+   "options": "Select\nDepartment 1\nDepartment 2\nDepartment 3\nDepartment 4"
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Select",
+   "label": "Program",
+   "options": "Select\nProgram 1\nProgram 2\nProgram 3"
+  },
+  {
+   "fieldname": "application_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Application Type",
+   "options": "Select\nUG\nPG\nPhD\nCertificate"
+  },
+  {
+   "fieldname": "fee_component",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Fee Component",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "currency_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Currency Type",
+   "options": "Select\nIndian Rupee (INR)\nUnited States Dollar (USD)\nEuro (EUR)\nBritish Pound Sterling (GBP)\nJapanese Yen (JPY)\nCanadian Dollar (CAD)\nAustralian Dollar (AUD)\nSwiss Franc (CHF)\nChinese Yuan Renminbi (CNY)\nBrazilian Real (BRL)\nUnited Arab Emirates Dirham (AED)\nKuwaiti Dinar (KWD)\nSingapore Dollar (SGD)\nMalaysian Ringgit (MYR)\nSaudi Riyal (SAR)"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "Select\nNot Applicable\nGeneral - TN Candidates\nGeneral - OS Candidates\nGeneral - NRI Candidates\nDifferently Abled - TN Candidates - General\nDifferently Abled - TN Candidates - SC/ST/SCA\nFirst Graduate - TN Candidate\nFor TN SC/ST/SCA Candidates ( below 2.5 lakh)\nPost Matric Scholarship - For Tamil Nadu SC/ST/SCA Candidates\nTamil Nadu SC/ST/SCA"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-05 12:31:13.689915",
+ "modified_by": "Administrator",
+ "module": "Fee Management",
+ "name": "Fees",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

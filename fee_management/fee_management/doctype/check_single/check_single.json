@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-29 18:30:56.723459",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "noun_name",
+  "noun_surname"
+ ],
+ "fields": [
+  {
+   "fieldname": "noun_name",
+   "fieldtype": "Data",
+   "label": "Noun Name"
+  },
+  {
+   "fieldname": "noun_surname",
+   "fieldtype": "Data",
+   "label": "Noun Surname"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-12-29 18:31:45.013151",
+ "modified_by": "Administrator",
+ "module": "Fee Management",
+ "name": "Check Single",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

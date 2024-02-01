@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:TEMP-{types_of_quota}-{type_of_courses}-{category}-{state}",
+ "creation": "2023-12-01 11:22:55.830180",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "types_of_quota",
+  "type_of_courses",
+  "category",
+  "state",
+  "total_demand",
+  "paid_",
+  "paid__college"
+ ],
+ "fields": [
+  {
+   "fieldname": "type_of_courses",
+   "fieldtype": "Select",
+   "label": "Type of courses",
+   "options": "Aided Course\nUnaided Course"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "Karnataka\nNon Karnataka\nSNQ\nSC/ST(upto 10 lakh)\nCat-1(below 2.5 lakhs)"
+  },
+  {
+   "fieldname": "total_demand",
+   "fieldtype": "Data",
+   "label": "Total Demand"
+  },
+  {
+   "fieldname": "paid_",
+   "fieldtype": "Data",
+   "label": "Paid @"
+  },
+  {
+   "fieldname": "paid__college",
+   "fieldtype": "Data",
+   "label": "Paiyable @ College"
+  },
+  {
+   "fieldname": "types_of_quota",
+   "fieldtype": "Select",
+   "label": "Types of Quota",
+   "options": "KEA Quota:E022\nKEA Quota:E056\nGOI Quota\nAICTE PMSSS Quota\nMAnagement Quota\nCOMEDK Quota"
+  },
+  {
+   "depends_on": "eval:doc.category=='Karnataka'|| doc.category=='Non Karnataka';",
+   "fieldname": "state",
+   "fieldtype": "Select",
+   "label": "Subcategory(Including income above 10 lakh for SC/ST and above 2.5 laks for Cat-1)",
+   "options": "GM\n2A\n2B\n3A\n3B\nSC(above 10 lakh income)\nST(above 10 lakh income)\nCat-1(above 2.5 lakh income)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-01 16:31:00.812441",
+ "modified_by": "Administrator",
+ "module": "Fee Management",
+ "name": "Fee Admin",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

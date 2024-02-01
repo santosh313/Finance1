@@ -1,0 +1,83 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"2awLG8PSHo\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\" style=\\\"\\\">Income</span>\",\"col\":12}},{\"id\":\"OPXVIuvUfp\",\"type\":\"card\",\"data\":{\"card_name\":\"Annual Income\",\"col\":4}},{\"id\":\"h6nRvfP87q\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Expenses</b></span>\",\"col\":12}},{\"id\":\"w3_gkjJyl_\",\"type\":\"card\",\"data\":{\"card_name\":\"Annual Expense\",\"col\":4}},{\"id\":\"vF7kvfI1-y\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Master Setting</b></span>\",\"col\":12}},{\"id\":\"pTCfw0W3gH\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Masters\",\"col\":3}},{\"id\":\"beZ0qGX6T7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"All Doctype\",\"col\":3}}]",
+ "creation": "2023-12-17 00:57:14.319866",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "quantity-1",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Finance Management",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Annual Expense",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Expenses",
+   "link_count": 0,
+   "link_to": "Expenses",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Annual Income",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Income",
+   "link_count": 0,
+   "link_to": "Income",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-01-05 12:57:34.357369",
+ "modified_by": "Administrator",
+ "module": "Fee Management",
+ "name": "Finance Management",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 23.0,
+ "shortcuts": [
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "All Doctype",
+   "link_to": "DocType",
+   "stats_filter": "[[\"DocType\",\"module\",\"=\",\"Fee Management\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Masters",
+   "link_to": "DocType",
+   "stats_filter": "[[\"DocType\",\"module\",\"=\",\"Fee Management\",false],[\"DocType\",\"naming_rule\",\"=\",\"By fieldname\",false]]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Finance Management"
+}

@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Receipt-{YY}-{MM}-{DD}-{#}",
+ "creation": "2023-12-07 12:43:52.806038",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "printed_date",
+  "university_name",
+  "invoice_id",
+  "payment_mode",
+  "card_type",
+  "applicant_id",
+  "applicant_name",
+  "amount_paid",
+  "program_type",
+  "category",
+  "department",
+  "program",
+  "application_type",
+  "currency"
+ ],
+ "fields": [
+  {
+   "default": "Now",
+   "fieldname": "printed_date",
+   "fieldtype": "Datetime",
+   "label": "Printed At"
+  },
+  {
+   "fieldname": "invoice_id",
+   "fieldtype": "Link",
+   "label": "Invoice ID",
+   "options": "Invoice"
+  },
+  {
+   "fetch_from": "invoice_id.fee_component",
+   "fieldname": "amount_paid",
+   "fieldtype": "Data",
+   "label": "Amount Paid"
+  },
+  {
+   "fetch_from": "invoice_id.university_name",
+   "fieldname": "university_name",
+   "fieldtype": "Data",
+   "label": "University Name"
+  },
+  {
+   "fetch_from": "invoice_id.program_type",
+   "fieldname": "program_type",
+   "fieldtype": "Data",
+   "label": "Program Type"
+  },
+  {
+   "fetch_from": "invoice_id.category",
+   "fieldname": "category",
+   "fieldtype": "Data",
+   "label": "Category"
+  },
+  {
+   "fetch_from": "invoice_id.department",
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fetch_from": "invoice_id.program",
+   "fieldname": "program",
+   "fieldtype": "Data",
+   "label": "Program"
+  },
+  {
+   "fetch_from": "invoice_id.application_type",
+   "fieldname": "application_type",
+   "fieldtype": "Data",
+   "label": "Application Type"
+  },
+  {
+   "fetch_from": "invoice_id.currency_type",
+   "fieldname": "currency",
+   "fieldtype": "Data",
+   "label": "Currency"
+  },
+  {
+   "fieldname": "payment_mode",
+   "fieldtype": "Link",
+   "label": "Payment Mode",
+   "options": "Payment Mode"
+  },
+  {
+   "depends_on": "eval:doc.payment_mode=='Card';",
+   "fieldname": "card_type",
+   "fieldtype": "Link",
+   "label": "Card Type",
+   "options": "Card Type"
+  },
+  {
+   "fetch_from": "invoice_id.applicant_id",
+   "fieldname": "applicant_id",
+   "fieldtype": "Data",
+   "label": "Applicant ID"
+  },
+  {
+   "fetch_from": "invoice_id.applicant_name",
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "label": "Applicant Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-08 12:02:29.970832",
+ "modified_by": "Administrator",
+ "module": "Fee Management",
+ "name": "Receipt",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

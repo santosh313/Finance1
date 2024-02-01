@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-01 12:11:04.240249",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "university_no",
+  "student_name",
+  "stream",
+  "academic_year",
+  "course_type",
+  "quota",
+  "quota_type2",
+  "category",
+  "categoy_different",
+  "select_fee_structure",
+  "one_time_fee",
+  "cautious_fee",
+  "semester_fee"
+ ],
+ "fields": [
+  {
+   "fieldname": "university_no",
+   "fieldtype": "Data",
+   "label": "University No",
+   "unique": 1
+  },
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name"
+  },
+  {
+   "fieldname": "course_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Course Type",
+   "options": "Course Master"
+  },
+  {
+   "depends_on": "eval:doc.quota=='General' || doc.quota_unaided=='General';",
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "General Category Master"
+  },
+  {
+   "depends_on": "eval:doc.course_type=='Regular Course(Aided)';",
+   "fieldname": "quota",
+   "fieldtype": "Link",
+   "label": "Quota Type",
+   "options": "Quota Master Regular"
+  },
+  {
+   "depends_on": "eval:doc.quota=='Differently Abled (TN Candidates)' || doc.quota_unaided=='Differently Abled (TN Candidates)';",
+   "fieldname": "categoy_different",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "General Category Master"
+  },
+  {
+   "depends_on": "eval:doc.course_type=='Self Supporting Course(Unaided)';",
+   "fieldname": "quota_type2",
+   "fieldtype": "Link",
+   "label": "Quota Type",
+   "options": "Quota Master Self Supported"
+  },
+  {
+   "depends_on": "eval:doc.academic_year=='FY';",
+   "fieldname": "one_time_fee",
+   "fieldtype": "Table",
+   "label": "One Time Fee",
+   "options": "One Time Fee Child"
+  },
+  {
+   "fieldname": "cautious_fee",
+   "fieldtype": "Table",
+   "label": "Cautious Fee",
+   "options": "Caution Deposit Item Child"
+  },
+  {
+   "fieldname": "semester_fee",
+   "fieldtype": "Table",
+   "label": "Semester Fee",
+   "options": "Semester Fee Item Child"
+  },
+  {
+   "fieldname": "stream",
+   "fieldtype": "Link",
+   "label": "Stream",
+   "options": "Stream"
+  },
+  {
+   "fieldname": "select_fee_structure",
+   "fieldtype": "Link",
+   "label": "Select Fee Structure",
+   "options": "New Fee"
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-12-12 19:35:37.774593",
+ "modified_by": "Administrator",
+ "module": "Fee Management",
+ "name": "Student Invoice",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

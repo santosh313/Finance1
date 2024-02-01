@@ -1,0 +1,13 @@
+{
+ "creation": "2024-01-05 11:10:22.122453",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart Source",
+ "idx": 0,
+ "modified": "2024-01-05 11:10:22.122453",
+ "modified_by": "Administrator",
+ "module": "Fee Management",
+ "name": "Test Source",
+ "owner": "Administrator",
+ "source_name": "Test Source",
+ "timeseries": 1
+}

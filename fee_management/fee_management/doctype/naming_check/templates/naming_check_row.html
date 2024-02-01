@@ -1,0 +1,76 @@
+<div>
+	<a href="{{ doc.route }}">{{ doc.title or doc.name }}</a>
+</div>
+<!-- this is a sample default list template -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .badge {
+            padding: 5px 10px;
+            border-radius: 3px;
+        }
+
+        .badge-success {
+            background-color: #28a745;
+            color: #fff;
+        }
+
+        .badge-primary {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .col-sm-2 {
+            flex: 0 0 16.66667%;
+            max-width: 16.66667%;
+        }
+
+        .col {
+            flex: 0 0 83.33333%;
+            max-width: 83.33333%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="py-20 row">
+        <div class="col-sm-2">
+            <img alt="Profile Photo" src="doc.profile_photo"/>
+        </div>
+        <div class="col">
+            <h1>School Name</h1>
+            <p class="lead">Principal: {{doc.name1}}</p>
+            <div>
+                <span class="badge badge-success">Open</span>
+            </div>
+            <div class="mt-4">
+                <p>Status: {{doc.status}}</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

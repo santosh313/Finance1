@@ -1,0 +1,50 @@
+{
+ "add_total_row": 1,
+ "columns": [
+  {
+   "fieldname": "name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "width": 0
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name",
+   "width": 0
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "width": 0
+  }
+ ],
+ "creation": "2023-12-27 11:51:19.349131",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2023-12-27 11:52:17.348169",
+ "modified_by": "Administrator",
+ "module": "Fee Management",
+ "name": "Naming Check Script report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Naming Check",
+ "report_name": "Naming Check Script report",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}
+
+
+
+
+

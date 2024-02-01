@@ -1,0 +1,30 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2023-12-19 14:43:18.024627",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 2,
+ "is_standard": "Yes",
+ "json": "{}",
+ "letterhead": null,
+ "modified": "2024-01-01 00:42:55.266225",
+ "modified_by": "Administrator",
+ "module": "Fee Management",
+ "name": "Report Test",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Fees1",
+ "report_name": "Report Test",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Applicant"
+  },
+  {
+   "role": "Blogger"
+  }
+ ]
+}

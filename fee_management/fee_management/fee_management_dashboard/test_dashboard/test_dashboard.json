@@ -1,0 +1,24 @@
+{
+ "cards": [],
+ "charts": [
+  {
+   "width": "Half"
+  },
+  {
+   "chart": "Test Chart2",
+   "width": "Half"
+  }
+ ],
+ "creation": "2023-12-19 15:07:18.685966",
+ "dashboard_name": "Test Dashboard",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2024-01-05 11:03:38.427918",
+ "modified_by": "Administrator",
+ "module": "Fee Management",
+ "name": "Test Dashboard",
+ "owner": "Administrator"
+}

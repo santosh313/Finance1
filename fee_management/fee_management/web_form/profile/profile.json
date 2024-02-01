@@ -1,0 +1,206 @@
+{
+ "allow_comments": 0,
+ "allow_delete": 0,
+ "allow_edit": 1,
+ "allow_incomplete": 0,
+ "allow_multiple": 0,
+ "allow_print": 1,
+ "anonymous": 0,
+ "apply_document_permissions": 1,
+ "button_label": "Save",
+ "condition_json": "[]",
+ "creation": "2023-12-12 01:24:43.890195",
+ "doc_type": "Applicant",
+ "docstatus": 0,
+ "doctype": "Web Form",
+ "idx": 0,
+ "is_standard": 1,
+ "list_columns": [
+  {
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "label": "Applicant Name"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "contact_no",
+   "fieldtype": "Data",
+   "label": "Contact No"
+  },
+  {
+   "fieldname": "program_type",
+   "fieldtype": "Select",
+   "label": "Program Type"
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Select",
+   "label": "Program"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Select",
+   "label": "Department"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category"
+  },
+  {
+   "fieldname": "application_type",
+   "fieldtype": "Select",
+   "label": "Application Type"
+  }
+ ],
+ "login_required": 1,
+ "max_attachment_size": 0,
+ "modified": "2023-12-12 12:12:12.308691",
+ "modified_by": "Administrator",
+ "module": "Fee Management",
+ "name": "profile",
+ "owner": "Administrator",
+ "published": 1,
+ "route": "applicant_details",
+ "show_attachments": 1,
+ "show_list": 1,
+ "show_sidebar": 1,
+ "title": "Applicant Details",
+ "web_form_fields": [
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "hidden": 0,
+   "label": "Applicant Name",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "hidden": 0,
+   "label": "Email",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "Email",
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "contact_no",
+   "fieldtype": "Data",
+   "hidden": 0,
+   "label": "Contact No",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "",
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "program_type",
+   "fieldtype": "Select",
+   "hidden": 0,
+   "label": "Program Type",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "Select\nRegular\nSelf Supporting",
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "program",
+   "fieldtype": "Select",
+   "hidden": 0,
+   "label": "Program",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "Select\nProgram 1\nProgram 2\nProgram 3",
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "department",
+   "fieldtype": "Select",
+   "hidden": 0,
+   "label": "Department",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "Select\nDepartment 1\nDepartment 2\nDepartment 3\nDepartment 4",
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "hidden": 0,
+   "label": "Category",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "Select\nNot Applicable\nGeneral - TN Candidates\nGeneral - OS Candidates\nGeneral - NRI Candidates\nDifferently Abled - TN Candidates - General\nDifferently Abled - TN Candidates - SC/ST/SCA\nFirst Graduate - TN Candidate\nFor TN SC/ST/SCA Candidates ( below 2.5 lakh)\nPost Matric Scholarship - For Tamil Nadu SC/ST/SCA Candidates\nTamil Nadu SC/ST/SCA",
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "application_type",
+   "fieldtype": "Select",
+   "hidden": 0,
+   "label": "Application Type",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "Select\nUG\nPG\nPhD\nCertificate",
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "section_break_bvab",
+   "fieldtype": "Section Break",
+   "hidden": 0,
+   "label": "",
+   "max_length": 0,
+   "max_value": 0,
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "default": "New",
+   "depends_on": "eval:doc.__islocal ? 0 : 1\n",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Status",
+   "max_length": 0,
+   "max_value": 0,
+   "options": "New\nEligible\nNot Eligible",
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  }
+ ],
+ "website_sidebar": "Applicant Sidebar"
+}
